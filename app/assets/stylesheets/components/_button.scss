@@ -1,0 +1,17 @@
+.btn-navbar {
+  background-color: $blue;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 20px;
+  &:hover {
+    text-decoration: none;
+    color: $red;
+    background-color: #07BEB8;
+  }
+}
+
+.search {
+  background-color: $green;
+  border: none;
+}
