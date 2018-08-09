@@ -2,8 +2,8 @@
  <!--  search bar -->
  <div class="search-form">
   <%= form_tag(cocktails_path, method: "get") do %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag("Search", class: "btn-navbar search") %>
+    <%= text_field_tag(:q, nil, placeholder: "Search ingredient", class: "search-input") %>
+    <%= submit_tag("Search", class: "btn-navbar", id: "search") %>
   <% end %>
  </div>
 

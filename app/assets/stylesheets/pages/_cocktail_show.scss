@@ -1,0 +1,34 @@
+.banner {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.cocktail-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: -50px;
+}
+
+.cocktail-box {
+  background-color: $pink;
+  padding: 30px;
+  border-radius: 5px;
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  a {
+    font-size: 18px;
+  }
+}
+
+#doses {
+  min-width: 400px;
+}

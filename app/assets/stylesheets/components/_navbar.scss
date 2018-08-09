@@ -14,10 +14,18 @@
 .logo {
   height: 100px;
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .search-form {
   min-width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  border-radius: 50px;
+  padding: 0 15px;
 }
 
 .button {

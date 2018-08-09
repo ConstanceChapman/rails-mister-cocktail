@@ -1,0 +1,12 @@
+.form-container {
+  display: flex;
+  justify-content: space-around;
+  form {
+    width: 30vw;
+  }
+}
+
+.form-input {
+  border-radius: 50px;
+  padding: 0 15px;
+}

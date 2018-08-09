@@ -1,6 +1,6 @@
 class CocktailsController < ApplicationController
   def index
-    if params[:q]
+    if params[:q] && !(params[:q] == "")
       @cocktails = Cocktail.joins(doses: :ingredient).where("ingredients.name ILIKE '%#{params[:q]}%'")
     else
       @cocktails = Cocktail.all
