@@ -1,10 +1,14 @@
-<div class="container">
-  <h1>Create a new dose!</h1>
-  <div class="form-container text-center">
-    <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.input :description %>
-    <%= f.association :ingredient %>
-    <%= f.submit "Add dose", class: "btn btn-navbar" %>
-    <% end %>
+<div class="banner new_cocktail_banner" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url(<%= image_path "new_cocktail.jpg" %>);"></div>
+
+<div class="form-container">
+  <div class="pink-box">
+    <h1>Create a new ingredient!</h1>
+    <div class="form-container text-center">
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit "Add ingredient", class: "btn btn-navbar" %>
+      <% end %>
+    </div>
   </div>
 </div>
