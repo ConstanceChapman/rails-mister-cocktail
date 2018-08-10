@@ -7,14 +7,34 @@
   position: relative;
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-  a {
+  h5 {
+    margin: 0;
     position: absolute;
-    bottom: 30px;
-    left: 20px;
+    bottom: 10px;
+    left: 10px;
     font-size: 24px;
     color: white;
+    transition: opacity 0.8s;
   }
-  a:hover {
-    text-decoration: none;
+  p {
+    padding-left: 0px;
+    font-size: 28px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0;
+    transition: opacity 0.8s;
   }
 }
+
+.card:hover {
+  text-decoration: none;
+  opacity: 0.9;
+  h5 {
+    opacity: 0;
+  }
+  p {
+    opacity: 1;
+  }
+}
+

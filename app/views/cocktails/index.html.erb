@@ -4,11 +4,18 @@
     <div class="row">
       <% @cocktails.each do |cocktail| %>
       <div class="col-xs-6 col-sm-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(<%= cl_image_path cocktail.photo %>);">
-          <div class="card-description">
-            <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+        <%= link_to cocktail_path(cocktail) do %>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(<%= cl_image_path cocktail.photo %>);">
+            <div class="card-description">
+              <p>
+                <% cocktail.doses.each do |dose| %>
+                <span><%= dose.ingredient.name %>  <i class="fas fa-heart"></i>  </span>
+                <% end %>
+              </p>
+              <h5><%= cocktail.name %></h5>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
       <% end %>
     </div>

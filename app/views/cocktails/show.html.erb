@@ -1,4 +1,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url(<%= @cocktail.photo %>);">
+  <h3>
+    <span id="ingredients-typed-text" data-ingredients="<%= @cocktail.doses.map { |d| d.ingredient.name}.join('|') %>"></span>
+  </h3>
 </div>
 
 <div class="container cocktail-container">
@@ -12,13 +15,17 @@
       <li>
         <div><strong><%= dose.ingredient.name %></strong> <%= dose.description %></div>
         <%= link_to dose_path(dose), method: :delete do %>
-          <i class="fas fa-trash-alt"></i>
+        <i class="fas fa-trash-alt"></i>
         <% end %>
       </li>
       <% end %>
     </ul>
-    <div class="button">
-      <%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "btn-navbar" %>
+    <div class="form-container text-center">
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit "Add some flavour", class: "btn btn-navbar", id: "new-dose" %>
+      <% end %>
     </div>
   </div>
 </div>
