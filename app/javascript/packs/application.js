@@ -9,4 +9,8 @@
 import 'bootstrap';
 console.log('Hello World from Webpacker')
 import { loadDynamicIngredientsText } from '../components/ingredients';
+import { initializeAOS } from '../components/scrollfunk';
+
 loadDynamicIngredientsText();
+initializeAOS();
+

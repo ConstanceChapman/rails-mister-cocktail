@@ -4,7 +4,8 @@
     <div class="row">
       <% @cocktails.each do |cocktail| %>
       <div class="col-xs-6 col-sm-4">
-        <%= link_to cocktail_path(cocktail) do %>
+        <div data-aos="fade-up">
+          <%= link_to cocktail_path(cocktail) do %>
           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(<%= cl_image_path cocktail.photo %>);">
             <div class="card-description">
               <p>
@@ -15,7 +16,8 @@
               <h5><%= cocktail.name %></h5>
             </div>
           </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
       <% end %>
     </div>
